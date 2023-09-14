@@ -37,6 +37,7 @@ public class AccountRegistrationPage extends BasePage {
 
 		@FindBy(xpath = "//h1[normalize-space()='Your Account Has Been Created!']")
 		WebElement msgConfirmation;
+			
 
 		public void setFirstName(String fname) {
 			txtFirstname.sendKeys(fname);
@@ -74,27 +75,8 @@ public class AccountRegistrationPage extends BasePage {
 		}
 
 		public void clickContinue() {
-			//sol1 
 			btnContinue.click();
-			
-			//sol2 
-			//btnContinue.submit();
-			
-			//sol3
-			//Actions act=new Actions(driver);
-			//act.moveToElement(btnContinue).click().perform();
-						
-			//sol4
-			//JavascriptExecutor js=(JavascriptExecutor)driver;
-			//js.executeScript("arguments[0].click();", btnContinue);
-			
-			//Sol 5
-			//btnContinue.sendKeys(Keys.RETURN);
-			
-			//Sol6  
-			//WebDriverWait mywait = new WebDriverWait(driver, Duration.ofSeconds(10));
-			//mywait.until(ExpectedConditions.elementToBeClickable(btnContinue)).click();
-			
+
 		}
 
 		public String getConfirmationMsg() {
@@ -106,4 +88,7 @@ public class AccountRegistrationPage extends BasePage {
 			}
 
 		}
+		
+
+		
 }
